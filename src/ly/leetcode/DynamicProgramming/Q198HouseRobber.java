@@ -1,4 +1,4 @@
-package ly.leetcode;
+package ly.leetcode.DynamicProgramming;
 
 public class Q198HouseRobber {
 	public static void main(String[] args) {

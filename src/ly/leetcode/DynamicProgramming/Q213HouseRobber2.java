@@ -5,7 +5,7 @@
  *      Author: liuyan
  */
 
-package ly.leetcode;
+package ly.leetcode.DynamicProgramming;
 
 public class Q213HouseRobber2 {
 	public static void main(String[] args) {
