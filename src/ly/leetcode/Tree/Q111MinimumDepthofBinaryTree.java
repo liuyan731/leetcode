@@ -12,7 +12,7 @@ public class Q111MinimumDepthofBinaryTree {
 		
 	}
 	
-	public int minDepth(TreeNode root) {
+	public int minDepth1(TreeNode root) {
 		if(root == null) {
 			return 0;
 		} else if(root.left == null && root.right == null) {
@@ -21,16 +21,32 @@ public class Q111MinimumDepthofBinaryTree {
 			int l = 1;
 			int r = 1;
 			if(root.left != null) {
-				l = l + minDepth(root.left);
+				l = l + minDepth1(root.left);
 			} else {
 				l = 1000000;
 			}
 			if(root.right != null) {
-				r = r + minDepth(root.right);
+				r = r + minDepth1(root.right);
 			} else {
 				r = 1000000;
 			}
 			return Math.min(l, r);
 		}
     }
+
+	public int minDepth2(TreeNode root) {
+		int ret = 0;
+		if(root == null) {
+			return 0;
+		} else if(root.left != null && root.right != null) {
+			int left = minDepth2(root.left) + 1;
+			int right = minDepth2(root.right) + 1;
+			ret = Math.min(left, right);
+		} else if(root.left == null) {
+			ret = minDepth2(root.right) + 1; 
+		} else if (root.right == null) {
+			ret = minDepth2(root.left) + 1;
+		}
+		return ret;
+	}
 }
