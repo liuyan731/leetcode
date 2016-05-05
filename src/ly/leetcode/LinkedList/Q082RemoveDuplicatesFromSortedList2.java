@@ -21,7 +21,7 @@ public class Q082RemoveDuplicatesFromSortedList2 {
 		node4.next = node5;
 		node5.next = node6;
 		
-		deleteDuplicates(node1);
+		deleteDuplicates2(node1);
 	}
 	
 	public static ListNode deleteDuplicates(ListNode head) {
@@ -61,6 +61,26 @@ public class Q082RemoveDuplicatesFromSortedList2 {
 			pPrev.next = pPrev.next.next;
 		}
 		
+		return newHead.next;
+	}
+	
+	public static ListNode deleteDuplicates2(ListNode head) {
+		ListNode newHead = new ListNode(-1);
+		newHead.next = head;
+		ListNode p = newHead;
+		ListNode q = p.next;
+		while(q != null) {
+			while(q.next != null && q.val == q.next.val) {
+				q = q.next;
+			}
+			if(p.next != q) {
+				p.next = q.next;
+				q = p.next;
+			} else {
+				p = p.next;
+				q = q.next;
+			}
+		}
 		return newHead.next;
 	}
 }
