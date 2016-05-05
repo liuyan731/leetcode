@@ -18,12 +18,8 @@ public class Q104MaximumDepthofBinaryTree {
 		} else {
 			int l = 1;
 			int r = 1;
-			if(root.left != null) {
-				l = l + maxDepth(root.left);
-			}
-			if(root.right != null) {
-				r = r + maxDepth(root.right);
-			}
+			l = l + maxDepth(root.left);
+			r = r + maxDepth(root.right);
 			return Math.max(l, r);
 		}
     }
