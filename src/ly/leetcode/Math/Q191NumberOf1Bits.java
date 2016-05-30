@@ -9,9 +9,8 @@ package ly.leetcode.Math;
 
 public class Q191NumberOf1Bits {
 	public static void main(String[] args) {
-		System.out.println(hammingWeight(1231231233));
+		System.out.println(hammingWeight(123));
 		System.out.println(hammingWeight1(1231231233));
-		
 		System.out.println(3>>1);
 	}
 
