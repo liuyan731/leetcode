@@ -1,6 +1,6 @@
 /*
  * Q119PascalTriangle2.java
- *
+ *	杨辉三角，也对应这二项式系数的问题
  *  Created on: 2016年5月21日
  *      Author: liuyan
  */

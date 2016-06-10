@@ -1,6 +1,6 @@
 /*
  * Q118PascalTriangle.java
- *
+ *	杨辉三角，也对应这二项式系数的问题
  *  Created on: 2016年5月20日
  *      Author: liuyan
  */
@@ -44,7 +44,6 @@ public class Q118PascalTriangle {
 			row.add(1);
 			ret.add(row);
 		}
-
 		return ret;
 	}
 }
