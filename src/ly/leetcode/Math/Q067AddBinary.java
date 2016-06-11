@@ -10,7 +10,8 @@ package ly.leetcode.Math;
 public class Q067AddBinary {
 
 	public static void main(String[] args) {
-		System.out.println(addBinary("11", "11"));
+		System.out.println(addBinary("111", "11"));
+		System.out.println(addBinary2("111", "11"));
 	}
 
 	public static String addBinary(String a, String b) {
@@ -50,11 +51,11 @@ public class Q067AddBinary {
 	/**
 	 * 转为int然后转为binary会整形溢出
 	 */
-	public String addBinary2(String a, String b) {
+	public static String addBinary2(String a, String b) {
 		return Integer.toBinaryString((toNum(a) + toNum(b)));
 	}
 
-	public int toNum(String str) {
+	public static int toNum(String str) {
 		int num = 0;
 		char[] cs = str.toCharArray();
 		for (int i = 0; i < cs.length; i++) {
